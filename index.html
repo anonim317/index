@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGEN PULSA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Isi Pulsa</h1>
+    </header>
+
+    <section id="services">
+        <h2>Layanan Kami</h2>
+        <form>
+            <h3>Isi Pulsa</h3>
+            <label for="no-hp-pulsa">Nomor HP:</label>
+            <input type="text" id="no-hp-pulsa" name="no-hp-pulsa" placeholder="Masukkan nomor HP">
+            <label for="nominal-pulsa">Nominal:</label>
+            <select id="nominal-pulsa" name="nominal-pulsa">
+                <option value="5000">Rp5.000</option>
+                <option value="10000">Rp10.000</option>
+                <option value="50000">Rp50.000</option>
+                <option value="100000">Rp100.000</option>
+            </select>
+            <button type="button" onclick="showPaymentModal()">Isi Pulsa</button>
+        </form>
+        <form>
+            <h3>Beli Paket</h3>
+            <label for="no-hp-data">Nomor HP:</label>
+            <input type="text" id="no-hp-data" name="no-hp-data" placeholder="Masukkan nomor HP">
+            <label for="paket-data">Paket Data:</label>
+            <select id="paket-data" name="paket-data">
+                <option value="1gb-5000">1GB - Rp5.000</option>
+                <option value="7gb-10000">7GB - Rp10.000</option>
+                <option value="10gb-15000">10GB - Rp15.000</option>
+                <option value="20gb-50000">20GB - Rp50.000</option>
+                <option value="100gb-120000">100GB - Rp120.000</option>
+            </select>
+            <button type="button" onclick="showPaymentModal()">Beli Paket</button>
+        </form>
+        <form>
+            <h3>Bayar Tagihan</h3>
+            <label for="jenis-tagihan">Jenis Tagihan:</label>
+            <select id="jenis-tagihan" name="jenis-tagihan">
+                <option value="listrik">Listrik</option>
+                <option value="wifi">WiFi</option>
+            </select>
+            <button type="button" onclick="showPaymentModal()">Bayar Tagihan</button>
+        </form>
+    </section>
+
+    <!-- Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h3>Pilih Metode Pembayaran</h3>
+            <p><strong>QRIS:</strong></p>
+            <img src="png/barcode dana.jpg" alt="QRIS" width="200">
+            <p><strong>Dana:</strong> 08123456789</p>
+            <p><strong>BRI:</strong> 1234-5678-9012-3456</p>
+            <p>Terima kasih telah membeli di sini.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Terima kasih telah mengunjungi agen Pulsa.</p>
+    </footer>
+
+    <script>
+        function showPaymentModal() {
+            document.getElementById('paymentModal').style.display = 'block';
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+    </script>
+    <style>
+    </style>
+</body>
+</html>
